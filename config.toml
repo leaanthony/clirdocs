@@ -1,4 +1,4 @@
-baseURL = "https://slir.leaanthony.com/"
+baseURL = "https://clir.leaanthony.com/"
 languageCode = "en-us"
 title = "Clîr"
 theme = "hugo-theme-learn"
