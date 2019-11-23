@@ -11,7 +11,7 @@ weight: 10
 
 ## Basic Usage
 
-```
+```go
 package main
 
 import (
