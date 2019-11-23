@@ -1,0 +1,8 @@
+baseURL = "https://slir.leaanthony.com/"
+languageCode = "en-us"
+title = "Clîr"
+theme = "hugo-theme-learn"
+pygmentsCodeFences = true
+
+[params]
+  themeVariant = "custom"
