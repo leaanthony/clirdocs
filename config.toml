@@ -7,7 +7,7 @@ googleAnalytics = "UA-153085769-1"
 
 [params]
   themeVariant = "custom"
-  editURL = "https://github.com/leaanthony/clirdocs"
+  editURL = "https://github.com/leaanthony/clirdocs/"
   # Author of the site, will be used in meta information
   author = "Lea Anthony"
   # Description of the site, will be used in meta information

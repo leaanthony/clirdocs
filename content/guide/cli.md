@@ -6,7 +6,7 @@ weight: 30
 chapter: false
 ---
 
-The main entry point for a Clîr application is as the Cli object. This is done through the `NewCli` command which takes an application name, description and version:
+The main entry point for a Clîr application is the Cli object. This is doncreatede using the `NewCli` command which takes an application name, description and version:
 
 ```go
 package main
