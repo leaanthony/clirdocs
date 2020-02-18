@@ -16,6 +16,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/leaanthony/clir"
 )
@@ -35,7 +36,12 @@ func main() {
 		return nil
 	})
 
-	cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```

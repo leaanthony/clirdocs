@@ -12,6 +12,7 @@ The main entry point for a Clîr application is the Cli object. This is doncreat
 package main
 
 import "github.com/leaanthony/clir"
+import "log"
 
 func main() {
   
@@ -19,7 +20,11 @@ func main() {
   cli := clir.NewCli("Basic", "A basic example", "v0.0.1")
 
   // Run the application
-  cli.Run()
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 }
 ```
 

@@ -12,6 +12,7 @@ Flags may be added to your application as follows:
 package main
 
 import "github.com/leaanthony/clir"
+import "log"
 
 func main() {
   
@@ -30,8 +31,12 @@ func main() {
   var awesome bool
   cli.BoolFlag("awesome", "Are you awesome?", &awesome)
 
-  // Run application
-  cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 }
 ```
 

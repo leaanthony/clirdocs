@@ -12,6 +12,8 @@ It is possible to provide your own banner by setting the Banner function that th
 package main
 
 import (
+	"log"
+	
 	"github.com/leaanthony/clir"
 )
 
@@ -36,8 +38,12 @@ func main() {
 	// Set the custom banner
 	cli.SetBannerFunction(customBanner)
 
-	// Run!
-	cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```

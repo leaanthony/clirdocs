@@ -15,6 +15,7 @@ package main
 
 import (
   "fmt"
+  "log"
 
   "github.com/leaanthony/clir"
 )
@@ -33,8 +34,12 @@ func main() {
     return nil
   })
 
-  // Run the app
-  cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```
@@ -82,6 +87,7 @@ package main
 
 import (
   "fmt"
+  "log"
 
   "github.com/leaanthony/clir"
 )
@@ -103,8 +109,12 @@ func main() {
     return nil
   })
 
-  // Run the app
-  cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```
@@ -134,6 +144,7 @@ package main
 
 import (
   "fmt"
+  "log"
 
   "github.com/leaanthony/clir"
 )
@@ -153,8 +164,12 @@ func main() {
     return nil
   })
 
-  // Run the app
-  cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```
@@ -193,6 +208,7 @@ package main
 
 import (
   "fmt"
+  "log"
 
   "github.com/leaanthony/clir"
 )
@@ -221,8 +237,12 @@ func main() {
   // Create a new "project" command and add it to the "init" command
   initCmd.AddCommand(newProjectCommand())
 
-  // Run the app
-  cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```
@@ -237,7 +257,8 @@ It's possible to hide subcommands by calling the `Hidden` method. This will omit
 package main
 
 import (
-	"fmt"
+  "fmt"
+  "log"
 
 	"github.com/leaanthony/clir"
 )
@@ -262,8 +283,12 @@ func main() {
 	})
 	devtoolsCommand.Hidden()
 
-	// Run the app
-	cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```
@@ -296,7 +321,8 @@ If you would like the default action of your application to be a particular subc
 package main
 
 import (
-	"fmt"
+  "fmt"
+  "log"
 
 	"github.com/leaanthony/clir"
 )
@@ -316,8 +342,12 @@ func main() {
 	// Make init the default command
 	cli.DefaultCommand(initCmd)
 
-	// Run the app
-	cli.Run()
+  // Run the application
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```

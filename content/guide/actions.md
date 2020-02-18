@@ -12,6 +12,7 @@ Actions define what code will be executed when your application is run. A basic 
 package main
 
 import "github.com/leaanthony/clir"
+import "log"
 
 func main() {
   
@@ -25,7 +26,11 @@ func main() {
   })
 
   // Run application
-  cli.Run()
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 }
 ```
 
@@ -43,7 +48,8 @@ package main
 
 import (
   "fmt"
-
+  "log"
+  
   "github.com/leaanthony/clir"
 )
 
@@ -63,7 +69,11 @@ func main() {
   })
 
   // Run application
-  cli.Run()
+  err := cli.Run()
+  if err != nil {
+    // We had an error
+    log.Fatal(err)
+  }
 
 }
 ```
