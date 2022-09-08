@@ -249,6 +249,10 @@ func main() {
 
 This really helps with better code organisation.
 
+### Inheriting Flags
+
+The `NewSubCommandInheritFlags` method will create a subcommand in the usual way but will inherit all previously defined flags in the parent.
+
 ### Hidden SubCommands
 
 It's possible to hide subcommands by calling the `Hidden` method. This will omit the subcommand from any help text.
